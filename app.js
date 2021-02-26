@@ -29,7 +29,7 @@ function task1(data) {
 
 const array1 = [1, 3, 5, 4, 5, 7];
 
-console.log('Result_1:');
+console.log('Result 1:');
 console.log(task1(array1));
 
 /*
@@ -69,10 +69,10 @@ const task2 = (data) => {
 }
 
 const array2 = [
-    [1, 2, 3, 2, 7, 5], [4, 5, 6, 8, 1, 6], [7, 8, 9, 4, 5, 7]
+    [1, 2, 3, 2, 7], [4, 5, 6, 8, 1], [7, 8, 9, 4, 5]
 ];
 
-console.log('Result_2:');
+console.log('Result 2:');
 console.log(task2(array2));
 
 
@@ -168,21 +168,36 @@ const task3 = (data, rules) => {
 
             string = '*' + string + '*';
 
-            /*if (i === 0) {
-                if (rule === 'LEFT') {
-                    string = '*' + string;
-                } else {
-                    string = string + '*';
-                }
-            }
-            if (i === lines.length - 1) {
-                if (rule === 'LEFT' || rule === 'RIGHT') {
-                    string = string + '*';
-                }
-            }*/
+            /* if (i === 0) {
+                 if (rule === 'LEFT') {
+                     string = '*' + string;
+                 } else {
+                     string = string + '*';
+                 }
+             }
+             if (i === lines.length - 1) {
+                 string = string + '*';
+             }*/
+
+            //Еще вариант
+
+            /* if (i === 0) {
+                 if (rule === 'LEFT') {
+                     string = '*' + string;
+                 } else {
+                     string = string + '*';
+                 }
+             }
+             if (i === lines.length - 1) {
+                 if (rule === 'LEFT') {
+                     string = string + '*';
+                 }
+                 else {
+                     string = '*' + string;
+                 }
+             }*/
 
             result.push(string);
-            console.log(string);
         });
     });
     return result;
@@ -196,5 +211,5 @@ let array3 = [
 
 let alignmentArr = ["LEFT", "RIGHT", "LEFT"];
 
-console.log('Result_3:');
+console.log('Result 3:');
 console.log(task3(array3, alignmentArr));
