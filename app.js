@@ -10,7 +10,6 @@
  *  [0, 1, 1, 0]
  */
 
-
 function task1(data) {
     let newArray = [];
 
@@ -59,7 +58,7 @@ const task2 = (data) => {
         let tmp = [];
         for (let i = 0; i < 3; i++) {
             for (let j = k; j < k + 3; j++) {
-                tmp.push(data[i][j])
+                tmp.push(data[i][j]);
             }
         }
         let uniqueNum = tmp.filter((v, i, a) => a.indexOf(v) === i).length === 9;
@@ -103,7 +102,6 @@ console.log(task2(array2));
  *   [
  *       "**",
  *       "Hello world *", " Brad came to*", "* dinner with us*", "He loves tacos *", "*" ]*/
-
 
 const task3 = (data, rules) => {
     let result = [];
